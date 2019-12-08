@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 #创建sparkSession上下文
 spark = SparkSession.builder.appName("test").getOrCreate()
 #以csv文件格式，并将文件首行作为元数据读取文件，创建DataFrame
-df = spark.read.format("csv").option("header","true").csv("E:\\PycharmProjects\\test\\test\\youtube.csv")
+df = spark.read.format("csv").option("header","true").csv("/Users/mac/PycharmProjects/pysparkTest/test/youtube.csv")
 #创建内存表test
 df.createOrReplaceTempView("test")
 
